@@ -16,15 +16,11 @@ class Vehicle {
         System.out.println("Brand: " + brand);
     }
 
-    // Method to start the vehicle
-    public void start() {
-        System.out.println("Vehicle is starting...");
-    }
 }
 
 // Subclass
 class Car extends Vehicle {
-    private String model;
+    private final String model;
 
     // Constructor
     public Car(String brand, String model) {
@@ -38,7 +34,6 @@ class Car extends Vehicle {
     }
 
     // Overriding the start method
-    @Override
     public void start() {
         System.out.println("Car is starting with keyless ignition...");
     }
