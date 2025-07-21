@@ -44,7 +44,8 @@ public class EmployeeController {
             employee.setInterviewStatus(updatedEmployee.getInterviewStatus());
             employee.setProjectAllocation(updatedEmployee.getProjectAllocation());
             return employeeRepository.save(employee);
-        }).orElse(null);
+        })
+                .orElse(null);
     }
 
     @DeleteMapping("/{id}")
